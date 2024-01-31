@@ -13,7 +13,7 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
 )
 from homeassistant.config_entries import SOURCE_IMPORT, ConfigEntry
-from homeassistant.const import CONF_NAME, CONF_TYPE, TIME_DAYS
+from homeassistant.const import CONF_NAME, CONF_TYPE, UnitOfTime
 from homeassistant.core import HomeAssistant
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.device_registry import DeviceEntryType
@@ -79,13 +79,13 @@ SENSOR_TYPES: tuple[SensorEntityDescription, ...] = (
     SensorEntityDescription(
         key=ENTITY_DAYS_LEFT,
         name="Days Left",
-        native_unit_of_measurement=TIME_DAYS,
+        native_unit_of_measurement=UnitOfTime.DAYS,
         icon=ICON_DAYS_LEFT,
     ),
     SensorEntityDescription(
         key=ENTITY_DAYS_IN,
         name="Days In",
-        native_unit_of_measurement=TIME_DAYS,
+        native_unit_of_measurement=UnitOfTime.DAYS,
         icon=ICON_DAYS_IN,
     ),
     SensorEntityDescription(
